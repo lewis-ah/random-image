@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+            color: white;
+        }
+        img {
+            border: 5px solid cyan;
+            padding: 10px;
+            width: 300px; 
+            height: 300px; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Image</h1>
+    <img id="randomImage" src="doggy.jpg" alt="a">
+
+    <script>
+        const images = [
+            'doggy.jpg',
+            'doggy2.jpeg',
+            'doggy3.jpg'
+        ];
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[randomIndex];
+    </script>
+</body>
+</html>
